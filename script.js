@@ -14,7 +14,7 @@ function startMusic() {
   audio.play().catch(() => console.log("Autoplay blocked"));
 }
 
-const password = "10122011";
+const password = "4321";
 document.getElementById('pwForm').addEventListener('submit', e => {
   e.preventDefault();
   if (document.getElementById('pwInput').value.trim() === password) {
