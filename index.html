@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Little Surprise 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="heart-rain"></div>
+  <audio id="bgAudio" loop>
+    <source src="https://raw.githubusercontent.com/mishraji0709/Surprise/main/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="app">
+    <!-- LOADING PAGE -->
+    <section id="loadingPage" class="section active">
+      <div class="card">
+        <div class="loader"></div>
+        <h2 class="handwritten">Opening your surprise... 💌</h2>
+        <p>Please wait a moment 🌸</p>
+      </div>
+    </section>
+
+    <!-- PASSWORD PAGE -->
+    <section id="passwordPage" class="section hidden">
+      <div class="card auth-card">
+        <h1 class="handwritten">Welcome to my page</h1>
+        <p>“I don’t know how you’ll react…”<br>But this is something I made just for you 💌</p>
+        <form id="pwForm">
+          <input type="password" id="pwInput" placeholder="Enter password" required />
+          <button class="btn">Open</button>
+        </form>
+        <p class="hint">Hint: It's a special date 💭</p>
+      </div>
+    </section>
+
+    <!-- MAIN PAGE -->
+    <section id="mainPage" class="section hidden">
+      <div class="card">
+        <div class="gif-embed-wrap">
+          <div class="tenor-gif-embed" data-postid="2132781642126111018" data-share-method="host" data-aspect-ratio="1.0" data-width="100%"></div>
+        </div>
+        <h2 class="handwritten">Hey —</h2>
+        <p id="typewriter"></p>
+        <button class="btn" id="toWelcome">Next →</button>
+      </div>
+    </section>
+
+    <!-- INTRO PAGE -->
+    <section id="welcomePage" class="section hidden">
+      <div class="card">
+        <div class="gif-embed-wrap">
+          <div class="tenor-gif-embed" data-postid="22023464" data-share-method="host" data-aspect-ratio="1.0" data-width="100%"></div>
+        </div>
+        <h2 class="handwritten">Hi! I’m <span style="white-space:nowrap;">Shubham Mishra</span></h2>
+        <p class="lead">I’m a pianist 🎹 and love to code.<br>That’s how this little surprise was born.</p>
+        <button class="btn" id="continueBtn">Continue →</button>
+      </div>
+    </section>
+
+    <!-- THOUGHT PAGE -->
+    <section id="quotePage" class="section hidden">
+      <div class="card">
+        <div class="gif-embed-wrap">
+          <div class="tenor-gif-embed" data-postid="1915095380882195511" data-share-method="host" data-aspect-ratio="1.0" data-width="100%"></div>
+        </div>
+        <h2 class="handwritten">A Little Thought 💫</h2>
+        <p class="lead quote">Some moments feel ordinary… until they change everything. Maybe this one will too.</p>
+        <button class="btn" id="toProposal">Continue →</button>
+      </div>
+    </section>
+
+    <!-- PROPOSAL PAGE -->
+    <section id="proposalPage" class="section hidden">
+      <div class="card">
+        <div class="gif-embed-wrap">
+          <div class="tenor-gif-embed" data-postid="5694817898147771659" data-share-method="host" data-aspect-ratio="1.0" data-width="100%"></div>
+        </div>
+        <h1 class="handwritten">Will you be my friend? 💖</h1>
+        <p>I want to be someone you can laugh with, lean on, and share little moments with.</p>
+        <div class="btn-row">
+          <button id="yesBtn" class="btn confirm">Yes — I'd love that</button>
+          <button id="noBtn" class="btn outline">No</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NO PAGE -->
+    <section id="noPage" class="section hidden">
+      <div class="card">
+        <div class="gif-embed-wrap">
+          <div class="tenor-gif-embed" data-postid="12611896631449379850" data-share-method="host" data-aspect-ratio="1.0" data-width="100%"></div>
+        </div>
+        <h1 class="handwritten">Oh… really? 😅</h1>
+        <p>Are you sure you don’t want to be friends?<br>Let's try once more 💖</p>
+        <div class="btn-row">
+          <button id="noYesBtn" class="btn confirm">Yes — let's be friends</button>
+          <button id="noNoBtn" class="btn outline">No — really</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- YES PAGE -->
+    <section id="yesPage" class="section hidden">
+      <div class="card fade-seq" id="yesCard">
+        <div class="gif-embed-wrap">
+          <div class="tenor-gif-embed" data-postid="4232353899743732903" data-share-method="host" data-aspect-ratio="1.0" data-width="100%"></div>
+        </div>
+        <h2 class="handwritten fade-line">Yay! Thank you ❤️</h2>  
+        <p class="fade-line">Congratulations — you’ve just joined my <b>VIP friend list</b> 😂</p>  
+        <p class="fade-line"><i>Just one rule — keep that smile, it suits you 😜</i></p>  
+        <p><i>Next time we meet, don’t act too cool 😉</i></p>  
+        <p><i>I know you’re secretly happy too 😏</i></p>  
+        <p class="fade-line insta">  
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="22" height="22" style="vertical-align:middle;margin-right:6px;border-radius:5px;">  
+          Find me on Instagram:  
+          <a href="https://instagram.com/solitary.boy_shubh" target="_blank">@solitary.boy_shubh</a>  
+        </p>  
+        <p class="signature fade-line">~ Shubham Mishra</p> 
+        <button class="btn outline" id="replayBtn">Replay 🔁</button>
+      </div>  
+    </section>  
+  </div>
+
+  <!-- Tenor embed script -->
+  <script async src="https://tenor.com/embed.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
